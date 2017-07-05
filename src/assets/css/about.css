@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:regular,bold,italic&subset=latin,latin-ext');
+
+body {
+  background: url('../css/shoes1.jpg');
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  background-size: cover;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #000000;
+  color : #FFFFFF;
+  text-align: center;
+  font-family: Josefin Sans, sans-serif ;
+  -webkit-animation: text-animation 2s infinite;
+          animation: text-animation 2s infinite;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes text-animation {
+  0% {
+    color: #FFFFFF;
+  }
+  15% {
+    color: #47525E;
+  }
+  85% {
+    color: #47525E;
+  }
+  100% {
+    color: #FFFFFF;
+  }
+}
