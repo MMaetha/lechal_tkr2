@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import calcCal from './calcCal'
 
 class InfoBar extends Component {
   constructor(props) {
@@ -9,8 +10,6 @@ class InfoBar extends Component {
       currentHeight: '',
       currentWeight: '',
       targetWeight: '',
-      BMI: '',
-      lossWeight: '',
     }
   }
 
