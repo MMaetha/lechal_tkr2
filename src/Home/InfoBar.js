@@ -9,6 +9,8 @@ class InfoBar extends Component {
       currentHeight: '',
       currentWeight: '',
       targetWeight: '',
+      BMI: '',
+      lossWeight: '',
     }
   }
 
@@ -50,6 +52,8 @@ class InfoBar extends Component {
             targetWeight: event.target.value
           })} />
         <p>target weight: {this.state.targetWeight} kg.</p>
+        <p>Your BMI: {this.state.currentWeight*10000/(this.state.currentHeight*this.state.currentHeight)} </p>
+        <p>Weight to loss: {this.state.currentWeight-this.state.targetWeight} kg. </p>
       </form>
     )
   }
