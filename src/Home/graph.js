@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Chart from 'chart.js';
 
@@ -36,10 +36,10 @@ export default class Graph extends Component {
             }
           }],
           xAxes: [{
-                time: {
-                    unit: 'day'
-                }
-            }]
+            time: {
+              unit: 'day'
+            }
+          }]
         }
       }
     });
@@ -47,7 +47,7 @@ export default class Graph extends Component {
 
   render() {
     return (
-      <canvas id="myChart" width="200" height="200">Test</canvas>
+      <canvas id="myChart" width="200" height="200" style={{backgroundColor: "#EEE"}}></canvas>
     );
   }
 }

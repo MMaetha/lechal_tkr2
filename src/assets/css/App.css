@@ -17,6 +17,8 @@ body {
 
 .App-header {
   background-color: #FFFFFF;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   color : #47525E;
   text-align: center;
   font-family: Josefin Sans, sans-serif ;
