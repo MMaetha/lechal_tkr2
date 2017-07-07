@@ -1,12 +1,18 @@
-import React from 'react';
+import React , { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './about.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Button } from 'reactstrap';
-//import Chart from './graph';
+import { Container } from 'reactstrap'
 
-//ReactDOM.render(<Chart />, document.getElementById('root'));
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+class about extends Component{
+render(){
+  return(
+    <Container>
+      <h1 className="App-header">LECHAL TRACKr</h1>
+
+    </Container>
+    )
+  }
+}
+
+export default about;

@@ -7,9 +7,11 @@ import {
 
 import App from './App/App'
 import Home from './Home/home'
+import about from './About/about'
 
 export default (
   <Route path="/" component={App}>
     <Route exact path="/" component={Home} />
+    <Route path="/about" component={about} />
   </Route>
 )
