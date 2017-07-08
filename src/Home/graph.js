@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Chart from 'chart.js';
+import { Container } from 'reactstrap'
 
 export default class Graph extends Component {
-
-
-
   componentDidMount() {
     var Date = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10",
                 "Day 11", "Day 12", "Day 13", "Day 14", "Day 15", "Day 16", "Day 17", "Day 18", "Day 19", "Day 20",
@@ -56,11 +54,27 @@ export default class Graph extends Component {
         }
       }
     });
+    document.getElementById('addData').addEventListener('click', function() {
+        if (myChart.data.length > 0) {
+            var day = Date[myChart.labels.length % Date.length];
+            myChart.labels.push(day);
+
+            for (var index = 0; index < myChart.data.length; ++index) {
+                //window.myBar.addData(randomScalingFactor(), index);
+                myChart.datasets[index].data.push(1000);
+            }
+
+            window.myChart.update();
+        }
+    });
   }
 
   render() {
     return (
-      <canvas id="myChart" width="200" height="200" style={{backgroundColor: "#EEE"}}></canvas>
-    );
+      <Container>
+        <button id="addData">Add Data</button>
+        <canvas id="myChart" width="200" height="200" style={{backgroundColor: "#EEE"}}></canvas>
+      </Container>
+      );
   }
 }
