@@ -1,15 +1,15 @@
-export class Storage {
-  setDataOnStorage(key, value) {
+export default class LocalStorage {
+  static setData(key, value) {
     let JSONString = JSON.stringify(value);
     localStorage.setItem(key, JSONString);
   }
 
-  getDataOnStorage(key) {
+  static getData(key) {
     let JSONString = localStorage.getItem(key);
     return JSON.parse(JSONString);
   }
 
-  removeDataOnStorage(key) {
+  static removeData(key) {
     localStorage.removeItem(key);
   }
 }

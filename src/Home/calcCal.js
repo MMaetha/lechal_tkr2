@@ -1,35 +1,29 @@
 import React, { Component } from 'react';
 
-class calcCal extends Component {
+export default class calcCal extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      dist: '',
-      currentHeight: '',
-      currentWeight: '',
-      totalDist: '',
-      MET: '',
-      averageSpeed: '',
       cal: '',
-      time: '',
-      steps: '',
     }
+
+    let currentHeight = 20;
+    let currentWeight = 20;
     const MET = 2.9;
     const averageSpeed = 0.97;
     let steps = 1220;
-    const dist = 0.414 * props.currentHeight;
-    let totalDist = props.dist * props.steps / 100;
-    let time = props.totalDist / averageSpeed;
-    const cal = props.currentWeight * MET * props.time / 3600;
+    const dist = 0.414 * currentHeight;
+    let totalDist = dist * steps / 100;
+    let time = totalDist / averageSpeed;
+    this.setState({cal: currentWeight * MET * time / 3600});
   }
-  render(){
-    return(
-      <p>You have burned {this.cal} calories.</p>
-
+  render() {
+    return (
+      <div>
+        <p>You have burned {this.state.cal} calories.</p>
+      </div>
     );
   }
 
 }
-
-export default calcCal;
