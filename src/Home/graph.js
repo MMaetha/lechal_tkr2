@@ -4,6 +4,24 @@ import Chart from 'chart.js';
 import { Container } from 'reactstrap'
 
 export default class Graph extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      step: '',
+      currentHeight: '',
+      currentWeight: '',
+      targetWeight: '',
+    }
+  }
+  <input
+    name="age"
+    type="number"
+    min="1"
+    onChange={event => this.setState({
+      age: event.target.value
+    })} />
+  <p>age: {this.state.age} years.</p>
   componentDidMount() {
     var Date = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10",
                 "Day 11", "Day 12", "Day 13", "Day 14", "Day 15", "Day 16", "Day 17", "Day 18", "Day 19", "Day 20",
@@ -26,13 +44,13 @@ export default class Graph extends Component {
           data: [5493, 3121, 4861, 7100, 21281, 3198, 8212],
 
           backgroundColor: [
-            // 'rgba(255, 99, 132, 1)',
-            // 'rgba(255, 206, 86, 1)',
-            // 'rgba(247, 205, 204, 1)',
-            // 'rgba(75, 192, 192, 1)',
-            // 'rgba(255, 159, 64, 1)',
-            // 'rgba(54, 162, 235, 1)',
-            // 'rgba(145, 168, 208, 1)'
+            'rgba(255, 99, 132, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(247, 205, 204, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(255, 159, 64, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(145, 168, 208, 1)'
           ],
           borderColor: [
           ],
