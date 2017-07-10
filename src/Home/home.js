@@ -6,6 +6,7 @@ import { Container } from 'reactstrap'
 
 class Home extends Component {
   render() {
+    document.title = "Home - Lechal";
     return (
       <Container>
         <h1 className="App-header">LECHAL TRACKr</h1>

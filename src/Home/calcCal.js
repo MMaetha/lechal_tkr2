@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import InfoBar from './InfoBar';
 
 class calcCal extends Component {
   constructor(props) {
