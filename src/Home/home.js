@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Graph from './graph'
 import InfoBar from './InfoBar'
-import calcCal from './calcCal'
 import { Container } from 'reactstrap'
 
 class Home extends Component {
@@ -40,9 +39,6 @@ class Home extends Component {
       <Container>
         <h1 className="App-header">LECHAL TRACKr</h1>
         <InfoBar updateChart={this.updateChart}/>
-        ---/
-        <calcCal />
-        /---
         <Graph chart={this.setChart}/>
       </Container>
     )

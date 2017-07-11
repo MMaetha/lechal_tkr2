@@ -11,7 +11,8 @@ class InfoBar extends Component {
       currentHeight: '',
       currentWeight: '',
       targetWeight: '',
-      steps: ''
+      steps: '',
+      totalDist: ''
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -87,8 +88,9 @@ class InfoBar extends Component {
 
         <Button id="addData" color="primary">Add Data</Button>
 
-        <p>Your BMI: {(this.state.currentWeight * 10000 / (this.state.currentHeight * this.state.currentHeight)).toFixed(2)};</p>
-        <p>Weight to loss: {this.state.currentWeight - this.state.targetWeight} kg. </p>
+        <p className="word-phase">Your BMI: {(this.state.currentWeight * 10000 / (this.state.currentHeight * this.state.currentHeight)).toFixed(2)};</p>
+        <p className="word-phase">Weight to loss: {this.state.currentWeight - this.state.targetWeight} kg. </p>
+        <p className="word-phase">You have burned {(this.state.currentWeight * 2.9 * (0.414 * this.state.currentHeight * this.state.steps / 100 / 0.97) / 3600).toFixed(2)} calories.</p>
       </form>
     )
   }
