@@ -5,6 +5,7 @@ import { Route } from 'react-router';
 
 import Home from '../Home/home'
 import about from '../About/about'
+import contact from '../Contact/contact'
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <Navbar />
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={about} />
+        <Route exact path="/contact" component={contact} />
       </div>
     );
   }
